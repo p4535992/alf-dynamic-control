@@ -1,0 +1,49 @@
+<model name="sop:contentmodel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+	<description>Demo Value Assitance Content Model</description>
+	<version>1.0</version>
+
+	<imports>
+		<!-- Import Alfresco Dictionary Definitions -->  
+		<import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>  
+		<import uri="http://www.alfresco.org/model/datalist/1.0" prefix="dl"/>
+	</imports> 
+
+	<namespaces>
+		<namespace uri="http://www.sujayopillai.com/model/sop/1.0" prefix="sop"/>
+	</namespaces> 
+
+	<constraints>
+	
+	</constraints>
+
+	<types>
+		<type name="sop:valueAssistanceListItem">
+			<title>Value Assistance List</title>
+			<parent>dl:dataListItem</parent>
+			<archive>false</archive>
+			<properties>
+				<property name="sop:value">
+					<title>Value</title>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="sop:sortOrder">
+					<title>Sort Order</title>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</type>
+	</types>
+
+	<aspects>
+		
+	</aspects>
+</model>
